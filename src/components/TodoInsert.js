@@ -18,8 +18,9 @@ const TodoInsert =({onInsert})=>{
             //submit 이벤트는 브라우저에서 새로고침을 발생시킨다
             //이를 방지하기 위해 이 함수를 호출한다
             e.preventDefault();
-        }
-    )
+        },
+        [onInsert, value],
+    );
     return(
         <form className="TodoInsert" onSubmit={onSubmit}>
             <input placeholder="할 일을 입력하세요"
